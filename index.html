@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MT Tours</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="logo">MT Tours</h1>
+    <header>
+        <div class="navbar">
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Cover Image Section -->
+    <section class="cover">
+        <h2>Your Gateway to Adventure</h2>
+    </section>
+
+    <main>
+        <section class="intro">
+            
+            <p>Discover the best tours, customized packages, and reliable vehicles with us.</p>
+        </section>
+
+        <!-- Packages Section -->
+        <h3>Our Packages</h3>
+        <div class="mainpackage">
+            
+            <div class="package">
+                <img src="imgs/p1.jpg" alt="Holiday Package" height="200px" width="200px">
+                <div class="package-details">
+                    <h4>Holiday Packages</h4>
+                    <p>Enjoy a relaxing vacation at stunning destinations around the world. Our holiday packages offer everything you need for a perfect getaway.</p>
+                    <a href="services.html" class="read-more">Read More</a>
+                </div>
+            </div>
+
+            <div class="package">
+                <img src="imgs/p2.jpg" alt="Honeymoon Package" height="200px" width="200px">
+                <div class="package-details">
+                    <h4>Honeymoon Packages</h4>
+                    <p>Experience romance in the most beautiful locations. Our honeymoon packages are designed to create unforgettable memories for newlyweds.</p>
+                    <a href="services.html" class="read-more">Read More</a>
+                </div>
+            </div>
+
+            <div class="package">
+                <img src="imgs/p3.jpg" alt="Weekend Getaway Package" height="200px" width="200px">
+                <div class="package-details">
+                    <h4>Weekend Getaways</h4>
+                    <p>Escape the hustle and bustle with our exciting weekend getaways. Perfect for a quick recharge and adventure.</p>
+                    <a href="services.html" class="read-more">Read More</a>
+                </div>
+            </div>
+
+            <div class="package">
+                <img src="imgs/p4.jpg" alt="Customized Package" height="200px" width="200px">
+                <div class="package-details">
+                    <h4>Customized Packages</h4>
+                    <p>Create your dream trip with our customized packages. Tailor every detail to your preferences for a unique travel experience.</p>
+                    <a href="services.html" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <section class="map">
+            <h3>Our Locations</h3>
+            <div id="map"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MT Tours. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function initMap() {
+            const location = { lat: -34.397, lng: 150.644 };
+            const map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 8,
+                center: location
+            });
+
+            const marker = new google.maps.marker.AdvancedMarkerElement({
+                position: location,
+                map: map,
+                title: 'MT Tours Location'
+            });
+        }
+    </script>
+
+    <!-- Loading the Google Maps API with recommended async loading -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</body>
+</html>
